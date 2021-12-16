@@ -1,54 +1,25 @@
 {
-  "compileOnSave": false,
-  "compilerOptions": {
-    "baseUrl": "./",
-    "outDir": "./dist/out-tsc",
-    "sourceMap": true,
-    "declaration": false,
-    "module": "esnext",
-    "moduleResolution": "node",
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "importHelpers": true,
-    "target": "es2015",
-    "typeRoots": [
-      "node_modules/@types"
-    ],
-    "paths": {
-      "@app/services": [
-        "src/app/_services"
-      ],
-      "@app/services/*": [
-        "src/app/_services/*"
-      ],
-      "@app/modules": [
-        "src/app/_modules"
-      ],
-      "@app/modules/*": [
-        "src/app/_modules/*"
-      ],
-      "@app/directives": [
-        "src/app/_directives"
-      ],
-      "@app/directives/*": [
-        "src/app/_directives/*"
-      ],
-      "@app/models": [
-        "src/app/_models"
-      ],
-      "@app/models/*": [
-        "src/app/_models/*"
-      ],
-      "@app/pipes": [
-        "src/app/_pipes"
-      ],
-      "@app/pipes/*": [
-        "src/app/_pipes/*"
-      ]
+    "compilerOptions": {
+        "baseUrl": ".",
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "strict": true,
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "rootDir": ".",
+        "sourceMap": true,
+        "inlineSources": true,
+        "target": "es5",
+        "skipLibCheck": true,
+        "lib": [
+            "es2015",
+            "dom"
+        ],
+        "typeRoots": [
+            "./node_modules/@types/"
+        ]
     },
-    "lib": [
-      "es2018",
-      "dom"
+    "exclude": [
+        "node_modules"
     ]
-  }
 }
