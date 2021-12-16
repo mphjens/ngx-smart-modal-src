@@ -93,6 +93,7 @@ export class NgxSmartModalComponent implements OnInit, OnDestroy, AfterViewInit 
   @Output() public onDataRemoved: EventEmitter<any> = new EventEmitter();
 
   public contentComponent: Type<Component>;
+  public contentComponentInstance: Component;
   public layerPosition: number = 1041;
   public overlayVisible: boolean = false;
   public openedClass: boolean = false;
@@ -370,7 +371,7 @@ export class NgxSmartModalComponent implements OnInit, OnDestroy, AfterViewInit 
   private createDynamicContent(changes: QueryList<ViewContainerRef>, factory: ComponentFactory<Component>): void {
     changes.forEach((viewContainerRef: ViewContainerRef) => {
       viewContainerRef.clear();
-      viewContainerRef.createComponent(factory);
+      this.contentComponentInstance = viewContainerRef.createComponent(factory);
       this.markForCheck();
     });
   }
