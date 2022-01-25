@@ -10,11 +10,12 @@
         "outDir": "dist",
         "declaration": true,
         "strict": true,
+        "strictPropertyInitialization": false,
         "moduleResolution": "node",
-        "module": "es2015",
+        "module": "esnext",
         "target": "es2015",
         "lib": [
-            "es2015",
+            "es2018",
             "dom"
         ],
         "skipLibCheck": true,
@@ -30,7 +31,6 @@
     ],
     "angularCompilerOptions": {
         "skipTemplateCodegen": true,
-        "annotateForClosureCompiler": true,
         "strictMetadataEmit": true,
         "flatModuleOutFile": "ngx-smart-modal.js",
         "flatModuleId": "ngx-smart-modal"
